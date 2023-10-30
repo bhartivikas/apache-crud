@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-map xmlns="http://cayenne.apache.org/schema/10/modelMap"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://cayenne.apache.org/schema/10/modelMap https://cayenne.apache.org/schema/10/modelMap.xsd"
+	 project-version="10">
+	<property name="defaultPackage" value="com.apacheapi.cms.entity"/>
+	<db-entity name="user_001">
+		<db-attribute name="dateOfBirth" type="DATE" isMandatory="true"/>
+		<db-attribute name="email" type="VARCHAR" isMandatory="true" length="50"/>
+		<db-attribute name="gender" type="VARCHAR" isMandatory="true" length="10"/>
+		<db-attribute name="id" type="INTEGER" isPrimaryKey="true" isMandatory="true"/>
+		<db-attribute name="mobile" type="VARCHAR" isMandatory="true" length="15"/>
+		<db-attribute name="password" type="VARCHAR" isMandatory="true" length="30"/>
+		<db-attribute name="username" type="VARCHAR" isMandatory="true" length="50"/>
+	</db-entity>
+	<obj-entity name="User001" className="com.apacheapi.cms.entity.User001" dbEntityName="user_001">
+		<obj-attribute name="dateOfBirth" type="java.time.LocalDate" db-attribute-path="dateOfBirth"/>
+		<obj-attribute name="email" type="java.lang.String" db-attribute-path="email"/>
+		<obj-attribute name="gender" type="java.lang.String" db-attribute-path="gender"/>
+		<obj-attribute name="mobile" type="java.lang.String" db-attribute-path="mobile"/>
+		<obj-attribute name="password" type="java.lang.String" db-attribute-path="password"/>
+		<obj-attribute name="username" type="java.lang.String" db-attribute-path="username"/>
+	</obj-entity>
+</data-map>
